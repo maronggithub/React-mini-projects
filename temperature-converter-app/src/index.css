@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F6F6F8;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.search .input {
+  background: linear-gradient(to top, #ffffff, #eeeeee);
+  border-radius: 50%;
+  color: #b7c0ca;
+  cursor: pointer;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
+  outline: none;
+  border:none;
+  height: 50px;
+  width: 50px;
+  transition: width 0.5s ease;
+}
+.search .input::placeholder {
+  opacity: 0;
+}
+.search.active .input {
+  width: 250px;
+  border-radius: 50px;
+  padding: 0 10px;
+}
+.search.active .input::placeholder {
+  opacity: 1;
+}
+.reset {
+  border: 0;
+  background: transparent;
+  /* padding: 15px 5px; */
+  transform: rotate(45deg) translateY(35px) translateX(10px);
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
+ 
+}
+.handle {
+  border: 0;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #ffffff, #eeeeee);
+}
+.search.active .reset {
+  transform: rotate(-45deg) translateY(10px) translateX(10px);
+  cursor: pointer;
+}
+.search .handle:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  background:linear-gradient(to top, #ffffff, #eeeeee);;
+  transition: all 0.3s ease;
+}
+.search.active .handle:after {
+  transform: rotate(90deg);
+  /* transition: all 0.3s ease; */
+}
