@@ -1,10 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit';
-import cityNameReducer from '../store/modules/cityName';
-
+import { configureStore } from "@reduxjs/toolkit";
+import weatherDataReducer from "./modules/weatherData";
 
 export const store = configureStore({
   reducer: {
-    cityname: cityNameReducer,
+    weatherdata: weatherDataReducer,
   },
 });
 

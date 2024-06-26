@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { setCityName } from "../store/modules/cityName";
-
+import { setCityName } from "../store/modules/weatherData";
 
 function Searchbox() {
   const [active, setActive] = useState(false);
