@@ -15,6 +15,7 @@ function Weather() {
   useEffect(() => {
     if (initialLoad) {
       dispatch(fetchUserCity()).then(() => setInitialLoad(false));
+      dispatch(fetchWeatherData()); 
     } else if (cityName) {
       dispatch(fetchWeatherData(cityName));
     }

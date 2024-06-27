@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const weatherDataStore = createSlice({
-  name: "cityname",
+  name: "weatherdata",
   initialState: {
     cityName: "",
     weatherData: "",
@@ -39,11 +39,12 @@ const fetchWeatherData = () => {
   return async (dispatch, getState) => {
     const apiKey = "1b18bc4c88485aa26026e6d4f1726052";
     const state = getState();
-    const cityName = state.cityName;
+    const cityName = state.weatherdata.cityName;
+    console.log(cityName);
 
     if (cityName) {
       try {
-        const apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
         const WeatherRes = await axios.get(apiUrl);
         dispatch(setWeatherData(WeatherRes.data));
         console.log(WeatherRes);
