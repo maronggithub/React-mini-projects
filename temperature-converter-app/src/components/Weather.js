@@ -25,11 +25,20 @@ function Weather() {
   const convertToCelsius = (tempInKelvin) => {
     return (tempInKelvin - 273.15).toFixed(2); // 转换为摄氏度并保留两位小数
   };
+  const getIconUrl = (icon) => {
+    return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  };
 
   return (
     <div className="weatherbox" id="weatherbox">
       <Searchbox />
-      <div className="weatherpic">{cityName}</div>
+      {weatherData && weatherData.weather[0].icon && (
+        <img
+          className="icon"
+          src={getIconUrl(weatherData.weather[0].icon)}
+          alt="Weather icon"
+        />
+      )}
       <h1 className="tempature">
         {weatherData
           ? `${convertToCelsius(weatherData.main.temp)} °C`
@@ -38,6 +47,7 @@ function Weather() {
       <h2 className="description">
         {weatherData ? weatherData.weather[0].description : "Loading..."}
       </h2>
+      <div className="weatherpic">{cityName}</div>
     </div>
   );
 }

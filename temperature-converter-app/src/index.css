@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-body {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #F6F6F8;
+  background-color: #dce2e7;
 }
 
 .search {
@@ -26,18 +27,18 @@ body {
   border-radius: 50%;
   color: #b7c0ca;
   cursor: pointer;
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05);
   outline: none;
   border:none;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   transition: width 0.5s ease;
 }
 .search .input::placeholder {
   opacity: 0;
 }
 .search.active .input {
-  width: 250px;
+  width: 200px;
   border-radius: 50px;
   padding: 0 10px;
 }
@@ -48,25 +49,25 @@ body {
   border: 0;
   background: transparent;
   /* padding: 15px 5px; */
-  transform: rotate(45deg) translateY(35px) translateX(10px);
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg) translateY(18px) translateX(10px);
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05);
  
 }
 .handle {
   border: 0;
-  width: 30px;
+  width: 20px;
   height: 5px;
   border-radius: 5px;
   background: linear-gradient(to top, #ffffff, #eeeeee);
 }
 .search.active .reset {
-  transform: rotate(-45deg) translateY(10px) translateX(10px);
+  transform: rotate(-45deg) translateY(12px) translateX(10px);
   cursor: pointer;
 }
 .search .handle:after {
   content: "";
   display: block;
-  width: 30px;
+  width: 20px;
   height: 5px;
   border-radius: 5px;
   background:linear-gradient(to top, #ffffff, #eeeeee);;
@@ -75,4 +76,31 @@ body {
 .search.active .handle:after {
   transform: rotate(90deg);
   /* transition: all 0.3s ease; */
+}
+
+#weatherbox {
+  width: 300px;
+  border: solid 2px white;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#weatherbox .icon {
+  width: 130px;
+  object-fit: contain;
+}
+#weatherbox .tempature {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #35364A;
+}
+#weatherbox .description {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #6a6c7b;
 }

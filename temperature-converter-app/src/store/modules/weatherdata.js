@@ -55,7 +55,6 @@ const fetchWeatherData = () => {
   };
 };
 
-
 const weatherDataReducer = weatherDataStore.reducer;
 export { setCityName,fetchUserCity,fetchWeatherData };
 export default weatherDataReducer;
