@@ -12,27 +12,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #dce2e7;
+  background-color: #EBF3F5;
 }
 
 .search {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 30px;
 }
 
 .search .input {
   background: linear-gradient(to top, #ffffff, #eeeeee);
+  border:3px solid #012857 ;
   border-radius: 50%;
   color: #b7c0ca;
   cursor: pointer;
   box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05);
   outline: none;
-  border:none;
   height: 30px;
   width: 30px;
   transition: width 0.5s ease;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.1);
 }
 .search .input::placeholder {
   opacity: 0;
@@ -44,21 +45,23 @@ body {
 }
 .search.active .input::placeholder {
   opacity: 1;
+  color: #9CA9B8;
 }
 .reset {
   border: 0;
   background: transparent;
   /* padding: 15px 5px; */
   transform: rotate(45deg) translateY(18px) translateX(10px);
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05);
- 
+  box-shadow: 0px 8px 12px 0 rgba(0, 0, 0, 0.6);
+  
 }
 .handle {
   border: 0;
   width: 20px;
-  height: 5px;
+  height: 3px;
   border-radius: 5px;
-  background: linear-gradient(to top, #ffffff, #eeeeee);
+  background: #012857;
+  
 }
 .search.active .reset {
   transform: rotate(-45deg) translateY(12px) translateX(10px);
@@ -68,9 +71,9 @@ body {
   content: "";
   display: block;
   width: 20px;
-  height: 5px;
+  height: 3px;
   border-radius: 5px;
-  background:linear-gradient(to top, #ffffff, #eeeeee);;
+  background:#012857;
   transition: all 0.3s ease;
 }
 .search.active .handle:after {
@@ -80,12 +83,13 @@ body {
 
 #weatherbox {
   width: 300px;
-  border: solid 2px white;
-  padding: 10px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to top, #ffffff, #f7f6f6);
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
 }
 
 #weatherbox .icon {
@@ -96,13 +100,13 @@ body {
   width: 100%;
   margin-bottom: 10px;
   font-size: 30px;
-  color: #35364A;
+  color: #012857;
 }
 #weatherbox .description {
   width: 100%;
   margin-bottom: 20px;
-  font-size: 20px;
-  color: #6a6c7b;
+  font-size: 18px;
+  color: #8993ac;
 }
 #weatherbox .weatherpic {
   position: relative;
@@ -126,7 +130,7 @@ body {
 #weatherbox .weatherpic span {
   position: relative;
   z-index: 2;
-  color: white;
+  color: #FFFFFF;
   font-size: 24px;
   font-weight: bold;
   display: flex;
