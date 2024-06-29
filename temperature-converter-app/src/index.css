@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #EBF3F5;
+  background-color: #C8D7E4;
 }
 
 .search {
@@ -23,7 +23,7 @@ body {
 }
 
 .search .input {
-  background: linear-gradient(to top, #ffffff, #eeeeee);
+  background: #eaf0f6;
   border:3px solid #012857 ;
   border-radius: 50%;
   color: #b7c0ca;
@@ -88,8 +88,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #ffffff, #f7f6f6);
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6);
+  background: #eaf0f6;
+  /* box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.05), -8px -8px 12px 0 rgba(255, 255, 255, 0.6); */
+  border-radius: 20px;
 }
 
 #weatherbox .icon {
