@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const weatherDataStore = createSlice({
-  name: "weatherdata",
+  name: "weatherData",
   initialState: {
     cityName: "",
     weatherData: "",
