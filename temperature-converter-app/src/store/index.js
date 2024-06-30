@@ -3,7 +3,7 @@ import weatherDataReducer from "./modules/weatherData";
 
 export const store = configureStore({
   reducer: {
-    weatherdata: weatherDataReducer,
+    weatherData: weatherDataReducer,
   },
 });
 

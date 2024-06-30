@@ -8,9 +8,9 @@ import {
 } from "../store/modules/weatherData";
 
 function Weather() {
-  const cityName = useSelector((state) => state.weatherdata.cityName);
-  const weatherData = useSelector((state) => state.weatherdata.weatherData);
-  const cityPhotoUrl = useSelector((state) => state.weatherdata.cityPhoto);
+  const cityName = useSelector((state) => state.weatherData.cityName);
+  const weatherData = useSelector((state) => state.weatherData.weatherData);
+  const cityPhotoUrl = useSelector((state) => state.weatherData.cityPhoto);
   const dispatch = useDispatch();
   const [initialLoad, setInitialLoad] = useState(true);
 

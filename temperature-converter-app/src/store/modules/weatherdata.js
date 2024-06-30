@@ -43,7 +43,7 @@ const fetchWeatherData = () => {
   return async (dispatch, getState) => {
     const apiKey = process.env.REACT_APP_OPEN_WEATHER_KEY;
     const state = getState();
-    const cityName = state.weatherdata.cityName;
+    const cityName = state.weatherData.cityName;
     console.log(cityName);
 
     if (cityName) {
@@ -63,7 +63,7 @@ const fetchCityPhoto = () => {
     return async (dispatch, getState) => {
         const cityPhotoApiKey = process.env.REACT_APP_PHOTO_KEY;
         const state = getState();
-        const cityName = state.weatherdata.cityName;
+        const cityName = state.weatherData.cityName;
         // console.log(cityName);
         if (cityName) {
             try {
