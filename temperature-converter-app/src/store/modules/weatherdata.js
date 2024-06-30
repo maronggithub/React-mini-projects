@@ -41,7 +41,7 @@ const fetchUserCity = () => {
 
 const fetchWeatherData = () => {
   return async (dispatch, getState) => {
-    const apiKey = "1b18bc4c88485aa26026e6d4f1726052";
+    const apiKey = process.env.REACT_APP_OPEN_WEATHER_KEY;
     const state = getState();
     const cityName = state.weatherdata.cityName;
     console.log(cityName);
@@ -61,7 +61,7 @@ const fetchWeatherData = () => {
 
 const fetchCityPhoto = () => {
     return async (dispatch, getState) => {
-        const cityPhotoApiKey = "m11T5e9rUfdnl2S3CWAjMNRmyDLM3lH8m4p-ARMBALs";
+        const cityPhotoApiKey = process.env.REACT_APP_PHOTO_KEY;
         const state = getState();
         const cityName = state.weatherdata.cityName;
         console.log(cityName);
