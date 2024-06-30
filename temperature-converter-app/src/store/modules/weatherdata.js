@@ -64,7 +64,7 @@ const fetchCityPhoto = () => {
         const cityPhotoApiKey = process.env.REACT_APP_PHOTO_KEY;
         const state = getState();
         const cityName = state.weatherdata.cityName;
-        console.log(cityName);
+        // console.log(cityName);
         if (cityName) {
             try {
                 const apiUrl = `https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${cityPhotoApiKey}`;
