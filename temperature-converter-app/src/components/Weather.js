@@ -5,7 +5,7 @@ import {
   fetchUserCity,
   fetchWeatherData,
   fetchCityPhoto
-} from "../store/modules/weatherData";
+} from "../store/modules/weatherData.js";
 
 function Weather() {
   const cityName = useSelector((state) => state.weatherData.cityName);
