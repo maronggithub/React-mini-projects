@@ -1,5 +1,5 @@
 [build]
-  command = "CI= npm run build"
+  command = "npm run build"
   publish = "temperature-converter-app/build"
   
 [[redirects]]
