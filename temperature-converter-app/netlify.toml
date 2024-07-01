@@ -1,6 +1,6 @@
 [build]
   base = "temperature-converter-app"
-  publish = "temperature-converter-app/build"
+  publish = "build"
   command = "npm run build"
   
 [[redirects]]
