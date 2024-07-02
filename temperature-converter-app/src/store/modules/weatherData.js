@@ -31,6 +31,7 @@ const fetchUserCity = () => {
   return async (dispatch) => {
     try {
       const cityRes = await axios.get("http://ip-api.com/json/");
+      // const cityRes = await axios.get("/.netlify/functions/fetchCity");
       console.log(cityRes);
       dispatch(setCityName(cityRes.data.city));
     } catch (error) {
